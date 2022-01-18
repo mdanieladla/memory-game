@@ -1,4 +1,4 @@
-# Meditation-app
+# Memory Game
 
 Vanilla JavaScript memory game with a card flip animation.
 
