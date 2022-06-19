@@ -1,5 +1,4 @@
 body {
-    height: 100vh;
     background: #74ebd5; /*fallback for old browsers */
     background: -webkit-linear-gradient(
         to right,
@@ -14,25 +13,27 @@ body {
 }
 
 .title{
+    margin-top: 60px;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .section {
+    margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(4, 8rem);
-    grid-template-rows: repeat(4, 8rem);
-    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: repeat(4, 5rem);
     perspective: 800px;
 }
 
 .card {
+    height: 70px;
+    width: 70px;
     position: relative;
     transform-style: preserve-3d;
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
-    /* transform: rotateY(0deg); */
 }
 
 .face, .back {
@@ -53,4 +54,27 @@ body {
 
 .face {
     transform: rotateY(180deg);
+}
+
+@media all and (min-width: 1000px) {
+    body {
+        height: 100vh;
+    }
+    
+    .title{
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    
+    .section {
+        margin-top: 0;
+        grid-template-columns: repeat(4, 8rem);
+        grid-template-rows: repeat(4, 8rem);
+        grid-gap: 2rem;
+    }
+    
+    .card {
+        height: 130px;
+        width: 130px;
+    }
 }
